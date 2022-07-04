@@ -20,7 +20,7 @@ function ArgonautsList() {
     useEffect(()=>{
         const getArgonautList = async () =>{
             try {
-                const res = await axios.get('http://localhost:5500/api/argonauts')
+                const res = await axios.get('https://argonautlist-app.herokuapp.com/api/argonauts')
                 console.log(res.data)
                 setArgonautList(res.data);
                 setArgonautCount(res.data.length);
@@ -43,7 +43,7 @@ function ArgonautsList() {
     const AddNewArgonaut = async (e) =>{
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5500/api/argonaut',
+            const res = await axios.post('https://argonautlist-app.herokuapp.com/api/argonaut',
                 {name: newArgonautName }
             );
             console.log(res);
@@ -57,7 +57,7 @@ function ArgonautsList() {
     // Delete a Argonaut from DataBAse - DELETE from "CRUD" // 
     const deleteArgonaut = async  (id, name) => {
         try {
-            const res = await axios.delete(`http://localhost:5500/api/argonaut/${id}`);
+            const res = await axios.delete(`https://argonautlist-app.herokuapp.com/api/argonaut/${id}`);
             console.log( 'Argonaut '+name+' deleted');
             countArgonautUpdate(-1);
         } catch (err) {
