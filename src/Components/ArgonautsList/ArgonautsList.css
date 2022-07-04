@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{ font-family: 'Roboto', sans-serif; }
+
+.container{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 40px 40px 1fr;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    width: 100%;
+    align-content: center;
+    grid-column: 1 / 13;
+}
+
+h2 { 
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+    font-size: 1.5em;
+    grid-row: 1 / 2 ;
+}
+
+form {
+    height: 30px;
+    width: 100%;
+    margin-top: 5px;
+    align-content: center;
+    justify-content: center;                                                                                                                                                                                                      
+}
+
+.argo-input{
+    display: flex;
+    padding: 5px ;
+    grid-column: span 12 ;
+    font-size: 0.8em;
+}
+
+input{
+    margin: 0 5px;
+    height: 20px;
+    border: solid 0.5px #616161;
+    border-radius: 5px;
+}
+
+label {
+    text-align: right;
+    width: 200px;
+}
+
+.text-input{
+    width: 150px;
+    min-width: 15ch;
+    left: 5px;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.button{
+    width: 80px;
+    min-width: 10ch;
+    cursor: pointer;
+    grid-column: span 2;
+}
+
+.argo-counter{
+    margin: 0 10px;
+    width: 100%;
+    text-align: center;
+    grid-column: 3 / 11;
+    grid-row: 3 / 4;
+}
+
+.argo-list{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+    grid-gap: 5px;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    grid-column: 2 / 12;
+}
+
+.argonaut{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    grid-column: span 1;
+}
+
+.argonaut p{
+    height: auto;
+    width: auto;
+    padding: 5px;
+    font-size: 0.8em;
+    text-align: center;
+    background-color: #f4f4f4;
+    border: solid 0.5px #616161;
+    border-radius: 5px;
+}
+
+.del-btn{
+    justify-content: center;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    background: #ec6969;
+    color: white;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 455px) {
+    .argo-input{
+        display: block;
+    }
+    .argo-counter{margin: 0 10px;}
+    img{
+        max-width: 70px;
+    }
+}

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import ArgonautsList from './Components/ArgonautsList/ArgonautsList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <img 
+          src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png"
+          alt="Wild Code School logo"
+        />
+        <h1>
+          Les Argonautes
+        </h1>
       </header>
+      <div className='main'>
+        <ArgonautsList />
+      </div>
+      <footer>
+        <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
+      </footer>
     </div>
   );
 }
