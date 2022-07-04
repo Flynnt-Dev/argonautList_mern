@@ -43,8 +43,7 @@ function ArgonautsList() {
     const AddNewArgonaut = async (e) =>{
         e.preventDefault();
         try {
-            const res = await axios.post(
-                'http://localhost:5500/api/argonaut',
+            const res = await axios.post('http://localhost:5500/api/argonaut',
                 {name: newArgonautName }
             );
             console.log(res);
